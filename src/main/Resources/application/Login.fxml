@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="396.0" prefWidth="562.0"
+            xmlns="http://javafx.com/javafx/20.0.1" fx:controller="controller.Login">
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="395.0" stroke="BLACK" strokeType="INSIDE"
+               width="562.0"/>
+    <Button fx:id="loginButton" layoutX="298.0" layoutY="278.0" mnemonicParsing="false" onAction="#ButtonLogin"
+            text="Log In">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Button>
+    <PasswordField fx:id="passField" layoutX="298.0" layoutY="221.0"/>
+    <TextField fx:id="userField" layoutX="298.0" layoutY="153.0"/>
+    <Label fx:id="loc" layoutX="448.0" layoutY="362.0" text="PLACEHOLDER"/>
+    <Button fx:id="exitButton" layoutX="397.0" layoutY="278.0" mnemonicParsing="false" onAction="#ButtonExit"
+            text="Exit">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Button>
+    <Label fx:id="enterUserText" layoutX="82.0" layoutY="153.0" text="Enter Username:">
+        <font>
+            <Font size="16.0"/>
+        </font>
+    </Label>
+    <Label fx:id="enterPassText" layoutX="82.0" layoutY="221.0" text="Enter Password:">
+        <font>
+            <Font size="16.0"/>
+        </font>
+    </Label>
+    <Label fx:id="locText" layoutX="373.0" layoutY="362.0" text="Location:"/>
+    <Label fx:id="title" layoutX="14.0" layoutY="14.0" text="User Login">
+        <font>
+            <Font name="System Bold" size="50.0"/>
+        </font>
+    </Label>
+
+</AnchorPane>

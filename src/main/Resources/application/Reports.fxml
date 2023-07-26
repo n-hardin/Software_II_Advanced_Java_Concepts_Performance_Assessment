@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="844.0" prefWidth="1299.0" xmlns="http://javafx.com/javafx/20.0.1"
+            fx:controller="controller.Reports">
+    <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports">
+        <font>
+            <Font name="System Bold" size="36.0"/>
+        </font>
+    </Text>
+    <Button fx:id="exitButton" layoutX="1233.0" layoutY="14.0" mnemonicParsing="false" text="Exit">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Button>
+    <TabPane layoutY="62.0" prefHeight="780.0" prefWidth="1300.0" tabClosingPolicy="UNAVAILABLE">
+        <Tab text="Total Appointments">
+            <AnchorPane maxHeight="0.0" maxWidth="0.0" minHeight="0.0" minWidth="0.0" prefHeight="171.0"
+                        prefWidth="1205.0">
+                <TableView fx:id="totalTable" layoutX="96.0" layoutY="15.0" minHeight="0.0" minWidth="0.0"
+                           prefHeight="682.0" prefWidth="1105.0">
+                    <columns>
+                        <TableColumn fx:id="totalTypeCol" prefWidth="100.0" text="App. Type"/>
+                        <TableColumn fx:id="janCol" prefWidth="83.0" text="January"/>
+                        <TableColumn fx:id="febCol" prefWidth="83.0" text="February"/>
+                        <TableColumn fx:id="marCol" prefWidth="82.0" text="March"/>
+                        <TableColumn fx:id="aprCol" prefWidth="83.0" text="April"/>
+                        <TableColumn fx:id="mayCol" prefWidth="83.0" text="May"/>
+                        <TableColumn fx:id="junCol" prefWidth="83.0" text="June"/>
+                        <TableColumn fx:id="julCol" prefWidth="83.0" text="July"/>
+                        <TableColumn fx:id="augCol" prefWidth="85.0" text="August"/>
+                        <TableColumn fx:id="sepCol" prefWidth="85.0" text="September"/>
+                        <TableColumn fx:id="octCol" prefWidth="85.0" text="October"/>
+                        <TableColumn fx:id="novCol" prefWidth="85.0" text="November"/>
+                        <TableColumn fx:id="decCol" prefWidth="85.0" text="December"/>
+                    </columns>
+                </TableView>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Contact Schedules">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <TableView fx:id="scheduleTable" layoutX="98.0" layoutY="76.0" minHeight="0.0" minWidth="0.0"
+                           prefHeight="600.0" prefWidth="1105.0">
+                    <columns>
+                        <TableColumn fx:id="idCol" prefWidth="125.0" text="Appointment ID"/>
+                        <TableColumn fx:id="titleCol" prefWidth="157.0" text="Title"/>
+                        <TableColumn fx:id="scheduleTypeCol" prefWidth="157.0" text="Type"/>
+                        <TableColumn fx:id="descCol" prefWidth="200.0" text="Description"/>
+                        <TableColumn fx:id="startCol" prefWidth="170.0" text="Start Date/Time"/>
+                        <TableColumn fx:id="endCol" prefWidth="170.0" text="End Date/Time"/>
+                        <TableColumn fx:id="custIDCol" prefWidth="125.0" text="Customer ID"/>
+                    </columns>
+                </TableView>
+                <ComboBox fx:id="contactCombo" layoutX="1053.0" layoutY="24.0" onAction="#contactCombo"
+                          prefWidth="150.0" promptText="Select a Contact"/>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Demographics">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <TableView fx:id="demoTable" layoutX="525.0" layoutY="18.0" prefHeight="715.0" prefWidth="250.0">
+                    <columns>
+                        <TableColumn fx:id="divisionCol" prefWidth="125.0" text="Division"/>
+                        <TableColumn fx:id="numberCol" prefWidth="125.0" text="# of customers"/>
+                    </columns>
+                </TableView>
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+</AnchorPane>

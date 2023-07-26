@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="844.0" prefWidth="1255.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Appointments">
+    <Text layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointments">
+        <font>
+            <Font name="System Bold" size="36.0" />
+        </font>
+    </Text>
+    <TableView fx:id="appointmentTable" layoutX="45.0" layoutY="93.0" prefHeight="680.0" prefWidth="1165.0">
+        <columns>
+            <TableColumn fx:id="appointmentID" minWidth="116.5" prefWidth="116.5" text="Appointment ID" />
+            <TableColumn fx:id="title" minWidth="116.5" prefWidth="116.5" text="Title" />
+            <TableColumn fx:id="description" minWidth="116.5" prefWidth="116.5" text="Description" />
+            <TableColumn fx:id="location" minWidth="116.5" prefWidth="116.5" text="Location" />
+            <TableColumn fx:id="contact" minWidth="116.5" prefWidth="116.5" text="Contact" />
+            <TableColumn fx:id="type" minWidth="116.5" prefWidth="116.5" text="Type" />
+            <TableColumn fx:id="start" minWidth="116.5" prefWidth="116.5" text="Start Date/Time" />
+            <TableColumn fx:id="end" minWidth="116.5" prefWidth="116.5" text="End Date/Time" />
+            <TableColumn fx:id="appCustomerID" minWidth="116.5" prefWidth="116.5" text="Customer ID" />
+            <TableColumn fx:id="userID" minWidth="116.5" prefWidth="116.5" text="User ID" />
+        </columns>
+    </TableView>
+    <RadioButton fx:id="weeklyRadio" layoutX="1037.0" layoutY="31.0" mnemonicParsing="false" onAction="#radioSwapWeekly" prefHeight="25.0" prefWidth="88.0" text="Weekly">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </RadioButton>
+    <RadioButton fx:id="monthlyRadio" layoutX="1142.0" layoutY="31.0" mnemonicParsing="false" onAction="#radioSwapMonthly" prefHeight="25.0" prefWidth="88.0" text="Monthly">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </RadioButton>
+    <ButtonBar layoutX="316.0" layoutY="25.0" prefHeight="40.0" prefWidth="624.0">
+        <buttons>
+            <Button fx:id="addCustomer" mnemonicParsing="false" onAction="#openAddCustomer" text="Add Customer" />
+            <Button fx:id="editCustomer" layoutX="524.0" layoutY="18.0" mnemonicParsing="false" onAction="#openEditCustomer" text="Edit Customer" />
+            <Button fx:id="addAppointment" layoutX="524.0" layoutY="18.0" mnemonicParsing="false" onAction="#openAddAppointment" text="Add Appointment" />
+            <Button fx:id="editAppointment" layoutX="524.0" layoutY="18.0" mnemonicParsing="false" onAction="#openEditAppointment" text="Edit Appointment" />
+            <Button fx:id="viewReports" layoutX="417.0" layoutY="18.0" mnemonicParsing="false" onAction="#openReports" prefHeight="25.0" text="View Reports" />
+        </buttons>
+    </ButtonBar>
+    <Button fx:id="logOutButton" layoutX="1119.0" layoutY="785.0" mnemonicParsing="false" onAction="#ButtonLogOut" text="Log Out">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Button>
+   <RadioButton fx:id="allRadio" layoutX="969.0" layoutY="32.0" mnemonicParsing="false" onAction="#radioSwapAll" prefHeight="25.0" prefWidth="64.0" text="All">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </RadioButton>
+</AnchorPane>
